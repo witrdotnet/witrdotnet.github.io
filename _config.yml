@@ -1,0 +1,48 @@
+---
+version: 3.8.3
+name: witrdotnet • 
+description: opensource, IT blog, culture
+url: https://witrdotnet.github.io/
+repository: https://github.com/witrdotnet
+timezone: France/Paris
+twitter:
+  username: witrdotnet
+logo: "/img/logo-2x.png"
+google_analytics_id: UA-117917571-2
+google_site_verification: 
+collections:
+  projects:
+    permalink: "/:collection/:path/"
+    output: true
+  posts:
+    permalink: "/posts/:year/:month/:day/:title/"
+    output: true
+  tutorials:
+    output: true
+defaults:
+- scope:
+    path: _projects
+    type: projects
+  values:
+    layout: projects
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: news_item
+    image: "/img/twitter-card.png"
+plugins:
+- jekyll-avatar
+- jekyll-feed
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-seo-tag
+- jekyll-sitemap
+- jemoji
+sass:
+  style: compressed
+exclude:
+- ".gitignore"
+- CNAME
+- icomoon-selection.json
+- readme.md

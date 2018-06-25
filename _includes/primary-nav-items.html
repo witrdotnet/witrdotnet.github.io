@@ -1,0 +1,14 @@
+<ul>
+  <li class="{% if page.overview %}current{% endif %}">
+    <a href="/">Home</a>
+  </li>
+  <li class="{% if page.url contains '/projects/' %}current{% endif %}">
+    <a href="/projects/home/">Projects</a>
+  </li>
+  <li class="{% if page.author %}current{% endif %}">
+    <a href="/posts/">Posts</a>
+  </li>
+  <li class="{% if page.url contains '/help/' %}current{% endif %}">
+    <a href="/help/">About</a>
+  </li>
+</ul>
